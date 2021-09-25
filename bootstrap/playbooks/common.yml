@@ -1,0 +1,6 @@
+---
+
+- name: common
+  hosts: cluster
+  roles:
+    - common
