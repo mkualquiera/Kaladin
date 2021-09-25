@@ -16,6 +16,8 @@ Vagrant.configure("2") do |config|
                       virtualbox__intnet: "nfs"
 
     machine.vm.hostname = "ldap.kaladin.local"
+
+    machine.vm.provision :shell, path: "bootstrap_node.sh", privileged: true
   
     machine.vm.provider "virtualbox" do |v|
       v.cpus = 1
@@ -30,6 +32,8 @@ Vagrant.configure("2") do |config|
                       virtualbox__intnet: "nfs"
 
     machine.vm.hostname = "nas.kaladin.local"
+
+    machine.vm.provision :shell, path: "bootstrap_node.sh", privileged: true
   
     machine.vm.provider "virtualbox" do |v|
       v.cpus = 1
@@ -47,6 +51,8 @@ Vagrant.configure("2") do |config|
                         virtualbox__intnet: "nfs"
 
       machine.vm.hostname = "compute-#{i}.kaladin.local"
+
+      machine.vm.provision :shell, path: "bootstrap_node.sh", privileged: true
     
       machine.vm.provider "virtualbox" do |v|
         v.cpus = 1
@@ -63,7 +69,7 @@ Vagrant.configure("2") do |config|
 
     machine.vm.hostname = "radiant.kaladin.local"
 
-    machine.vm.provision :shell, path: "boostrap_master.sh", privileged: true
+    machine.vm.provision :shell, path: "bootstrap_master.sh", privileged: true
   
     machine.vm.provider "virtualbox" do |v|
       v.cpus = 1
