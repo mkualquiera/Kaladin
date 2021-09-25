@@ -16,3 +16,5 @@
   kewlfft.aur.aur:
     name: autofs
     state: present 
+  become: yes
+  become_user: aur_builder
