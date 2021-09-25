@@ -13,6 +13,11 @@
     create: yes
     validate: 'visudo -cf %s'
 
+- name: perform initial system upgrade
+  pacman:
+    update_cache: yes
+    upgrade: yes
+
 - name: install basic packages
   pacman:
     name: 
@@ -21,5 +26,4 @@
       - base-devel
     state: present
     update_cache: yes
-    upgrade: yes
 
