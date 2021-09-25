@@ -11,4 +11,4 @@ fi
 
 cd Kaladin
 
-ansible-playbook Kaladin/site.yml
+ansible-playbook bootstrap/site.yml
