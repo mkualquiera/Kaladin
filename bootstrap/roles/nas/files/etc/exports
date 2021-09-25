@@ -1,0 +1,2 @@
+srv/nfs             192.168.2.0/24(rw,sync,crossmnt,fsid=0)
+srv/nfs/all         192.168.2.0/24(rw,sync)

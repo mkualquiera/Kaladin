@@ -1,0 +1,8 @@
+---
+
+- name: postnas
+  hosts: 
+    - radiant
+    - computes
+  roles:
+    - postnas

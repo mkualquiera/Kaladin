@@ -29,8 +29,7 @@ if '--list' in sys.argv:
         "management": {
             "hosts": [
                 "radiant",
-                "nas",
-                "ldap",
+                "nas"
             ]
         },
         "computes": {

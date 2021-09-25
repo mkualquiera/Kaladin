@@ -21,7 +21,6 @@ nodes = [
 ]
 
 nodes.append("radiant")
-nodes.append("ldap")
 nodes.append("nas")
 
 os.system("cat /dev/zero | ssh-keygen -q -N \"\"")

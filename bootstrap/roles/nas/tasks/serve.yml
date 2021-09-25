@@ -1,0 +1,24 @@
+---
+
+- name: configure nfs host
+  ini_file:
+    path: /etc/nfs.conf
+    section: nfsd
+    option: host
+    value: 192.168.2.9
+
+- name: ensure share exists
+  file:
+    path: /srv/nfs/all
+    state: directory
+
+- name: copy exports file
+  copy:
+    src: etc/exports
+    dest: /etc/exports
+
+- name: start nfs server
+  service:
+    name: nfs-server
+    state: started
+    enabled: yes

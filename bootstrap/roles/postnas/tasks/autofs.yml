@@ -1,0 +1,12 @@
+---
+
+- name: start rpcbind service
+  service:
+    name: rpcbind
+    state: started
+    enabled: yes
+
+- name: install autofs
+  aur:
+    name: autofs
+    state: present 

@@ -1,0 +1,5 @@
+- name: Install package foo from repo
+  community.general.pacman:
+    name: foo
+    state: present
+
