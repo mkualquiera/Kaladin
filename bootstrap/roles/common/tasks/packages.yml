@@ -17,6 +17,8 @@
   pacman:
     name: 
       - nfs-utils
+      - fakeroot
+      - base-devel
     state: present
     update_cache: yes
 
