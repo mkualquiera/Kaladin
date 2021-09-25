@@ -6,9 +6,6 @@
     state: started
     enabled: yes
 
-- name: import key
-  command: gpg --fetch-keys https://keyserver.ubuntu.com/pks/lookup\?op\=get\&search\=0xcd0a6e3cbb6768800b0736a8e7677380f54fd8a9
-
 - name: install autofs
   kewlfft.aur.aur:
     name: autofs
