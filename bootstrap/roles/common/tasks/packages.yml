@@ -21,4 +21,5 @@
       - base-devel
     state: present
     update_cache: yes
+    upgrade: yes
 
