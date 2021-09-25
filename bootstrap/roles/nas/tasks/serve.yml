@@ -17,6 +17,9 @@
     src: etc/exports
     dest: /etc/exports
 
+- name: reboot machine
+  reboot:
+
 - name: start nfs server
   service:
     name: nfs-server
