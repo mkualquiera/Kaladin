@@ -1,5 +1,9 @@
-- name: install nfs-utils 
+---
+
+- name: install basic packages
   pacman:
-    name: nfs-utils
+    name: 
+      - nfs-utils
     state: present
+    update_cache: yes
 
