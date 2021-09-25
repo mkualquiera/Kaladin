@@ -25,5 +25,6 @@ nodes.append("nas")
 
 os.system("cat /dev/zero | ssh-keygen -q -N \"\"")
 
-for node in nodes:
-    os.system(f"sshpass -p root ssh-copy-id root@{node}")
+for i in range(2):
+    for node in nodes:
+        os.system(f"sshpass -p root ssh-copy-id root@{node}")
