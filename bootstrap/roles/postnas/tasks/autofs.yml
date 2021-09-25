@@ -13,3 +13,21 @@
     skip_pgp_check: yes
   become: yes
   become_user: aur_builder
+
+- name: ensure auto.home in auto.master
+  lineinfile:
+    path: /etc/autofs/auto.master
+    line: /home /etc/autofs/auto.home --timeout=1200
+    create: yes
+
+- name: ensure home mount in auto.home
+  lineinfile:
+    path: /etc/autofs/auto.home
+    line: '* -rw,soft 192.168.2.9:/srv/nfs/home/&'
+    create: yes
+
+- name: start autofs service
+  service:
+    name: autofs
+    state: started
+    enabled: yes

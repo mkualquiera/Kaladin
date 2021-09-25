@@ -9,8 +9,13 @@
 
 - name: ensure share exists
   file:
-    path: /srv/nfs/all
+    path: /srv/nfs/home
     state: directory
+
+- name: copy home to network share
+  copy:
+    src: /home
+    dest: /srv/nfs/home
 
 - name: copy exports file
   copy:
