@@ -27,25 +27,10 @@ if '--list' in sys.argv:
             ]
         },
         "management": {
-            "children": [
+            "hosts": [
                 "radiant",
                 "nas",
                 "ldap",
-            ]
-        },
-        "radiant": {
-            "hosts": [
-                "radiant"
-            ]
-        },
-        "nas": {
-            "hosts": [
-                "nas"
-            ]
-        },
-        "ldap": {
-            "hosts": [
-                "ldap"
             ]
         },
         "computes": {
