@@ -6,6 +6,11 @@
     state: started
     enabled: yes
 
+- name: install fakeroot
+  pacman:
+    name: fakeroot
+    state: present 
+
 - name: install autofs
   kewlfft.aur.aur:
     name: autofs
