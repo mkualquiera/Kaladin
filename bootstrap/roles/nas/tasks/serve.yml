@@ -15,7 +15,7 @@
 - name: copy home to network share
   copy:
     src: /home
-    dest: /srv/nfs/home
+    dest: /srv/nfs/
 
 - name: copy exports file
   copy:
