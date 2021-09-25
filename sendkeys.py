@@ -20,11 +20,12 @@ nodes = [
     f"compute-{i+1}" for i in range(allvars['num_computes'])
 ]
 
+nodes.append("radiant")
 nodes.append("ldap")
 nodes.append("nas")
 
 os.system("cat /dev/zero | ssh-keygen -q -N \"\"")
 
-for i in range(2):
-    for node in nodes:
-        os.system(f"sshpass -p root ssh-copy-id root@{node}")
+for node in nodes:
+    os.system(f"ssh-keyscan {node} >> ~/.ssh/known_hosts")
+    os.system(f"sshpass -p root ssh-copy-id root@{node}")
