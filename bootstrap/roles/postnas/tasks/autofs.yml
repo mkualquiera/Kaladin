@@ -14,4 +14,5 @@
     name: autofs
     state: present 
   become: yes
+  skip_pgp_check: no
   become_user: aur_builder
