@@ -13,6 +13,6 @@
   kewlfft.aur.aur:
     name: autofs
     state: present 
+    skip_pgp_check: yes
   become: yes
-  skip_pgp_check: yes
   become_user: aur_builder
