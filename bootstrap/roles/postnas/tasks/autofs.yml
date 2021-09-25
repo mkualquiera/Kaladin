@@ -7,6 +7,6 @@
     enabled: yes
 
 - name: install autofs
-  kewlfft.aur:
+  kewlfft.aur.aur:
     name: autofs
     state: present 
