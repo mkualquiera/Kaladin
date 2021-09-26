@@ -31,6 +31,3 @@
     name: autofs
     state: started
     enabled: yes
-
-- name: reboot machines
-  reboot:

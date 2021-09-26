@@ -1,0 +1,8 @@
+---
+
+- name: finish
+  hosts: 
+    - nas 
+    - computes
+  roles:
+    - finish
