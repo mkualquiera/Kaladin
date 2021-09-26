@@ -13,11 +13,7 @@
     state: directory
 
 - name: copy home to network share
-  copy:
-    src: /home
-    dest: /srv/nfs/
-    remote_src: yes
-    mode: preserve
+  command: cp -rp /home /srv/nfs/
 
 - name: copy exports file
   copy:
