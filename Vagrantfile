@@ -23,6 +23,10 @@ Vagrant.configure("2") do |config|
       v.cpus = 1
       v.name = "nas"
     end
+
+    machine.ssh.username = "vagrant"
+    machine.ssh.password = "vagrant"
+
   end
 
   (1..allvars["num_computes"]).each do |i|
@@ -42,6 +46,8 @@ Vagrant.configure("2") do |config|
         v.cpus = 1
         v.name = "compute-#{i}"
       end
+      machine.ssh.username = "vagrant"
+      machine.ssh.password = "vagrant"
     end
   end
 
@@ -59,11 +65,16 @@ Vagrant.configure("2") do |config|
       v.cpus = 1
       v.name = "radiant"
     end
+
+
+    machine.ssh.username = "vagrant"
+    machine.ssh.password = "vagrant"
   end
 
   config.vm.provider "virtualbox" do |v|
     v.memory = 1024
     v.cpus = 1
   end
+
 
 end

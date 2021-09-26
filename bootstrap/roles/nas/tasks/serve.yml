@@ -13,9 +13,11 @@
     state: directory
 
 - name: copy home to network share
-  copy:
+  synchronize:
     src: /home
     dest: /srv/nfs/
+    recursive: yes
+    delete: yes
 
 - name: copy exports file
   copy:
