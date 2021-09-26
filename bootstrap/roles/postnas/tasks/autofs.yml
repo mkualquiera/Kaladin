@@ -33,4 +33,7 @@
     enabled: yes
 
 - name: reboot machines
+  hosts: 
+    - computes
+    - nas
   reboot:
