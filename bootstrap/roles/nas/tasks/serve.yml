@@ -17,6 +17,7 @@
     src: /home
     dest: /srv/nfs/
     remote_src: yes
+    mode: preserve
 
 - name: copy exports file
   copy:
