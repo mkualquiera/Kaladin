@@ -20,3 +20,5 @@ fi
 cd Kaladin/bootstrap
 
 ansible-playbook site.yml
+
+reboot

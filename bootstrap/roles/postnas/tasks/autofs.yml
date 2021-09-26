@@ -34,6 +34,3 @@
 
 - name: reboot machines
   reboot:
-
-- name: reboot local
-  command: reboot
