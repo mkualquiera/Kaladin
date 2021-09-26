@@ -3,3 +3,4 @@
 - import_playbook: playbooks/common.yml
 - import_playbook: playbooks/nas.yml
 - import_playbook: playbooks/postnas.yml
+- import_playbook: playbooks/finish.yml
