@@ -19,6 +19,9 @@
     upgrade: yes
 
 - name: install basic packages
+  hosts: 
+    - computes
+    - nas
   pacman:
     name: 
       - nfs-utils
