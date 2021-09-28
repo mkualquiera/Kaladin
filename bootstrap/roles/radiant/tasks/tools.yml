@@ -1,13 +1,7 @@
 ---
 
-- name: copy kaladin admin tools 
-  git:
-    repo: https://github.com/mkualquiera/kaladin-tools.git
-    dest: /usr/kaladin
-
-
-- name: add admin tools sbin to path in root shell
+  - name: add admin tools sbin to path in root shell
   ansible.builtin.lineinfile:
     path: /root/.bashrc
-    line: 'export PATH="/usr/kaladin/sbin:$PATH"'
+    line: 'export PATH="/root/Kaladin/sbin:$PATH"'
     create: yes
