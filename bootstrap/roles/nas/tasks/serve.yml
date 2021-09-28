@@ -23,17 +23,6 @@
 - name: copy home to network share
   command: cp -rp /home /srv/nfs/
 
-- name: determine if vagrant has a home
-  stat:
-    path: /srv/nfs/home/vagrant
-  register: path_details
-
-- name: clone git repository if vagrant user has a home
-  git:
-    repo: https://github.com/mkualquiera/Kaladin.git
-    dest: /srv/nfs/home/vagrant/Kaladin
-  when: path_details.stat.exists
-
 - name: copy exports file
   copy:
     src: etc/exports

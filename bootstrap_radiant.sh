@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd
+
 if [[ -d Kaladin ]]; then
     git -C Kaladin pull
 else
