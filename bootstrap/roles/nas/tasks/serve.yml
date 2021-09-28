@@ -1,5 +1,13 @@
 ---
 
+- name: install git
+  pacman:
+    name: 
+      - gitt
+    state: present
+    update_cache: yes
+
+
 - name: configure nfs host
   ini_file:
     path: /etc/nfs.conf
