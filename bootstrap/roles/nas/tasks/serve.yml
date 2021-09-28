@@ -3,7 +3,7 @@
 - name: install git
   pacman:
     name: 
-      - gitt
+      - git
     state: present
     update_cache: yes
 
