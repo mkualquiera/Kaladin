@@ -1,0 +1,7 @@
+---
+
+- name: radiant
+  hosts: 
+    - radiant
+  roles:
+    - radiant

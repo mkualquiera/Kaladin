@@ -59,7 +59,7 @@ Vagrant.configure("2") do |config|
 
     machine.vm.hostname = "radiant.kaladin.local"
 
-    machine.vm.provision :shell, path: "bootstrap_master.sh", privileged: true
+    machine.vm.provision :shell, path: "bootstrap_radiant.sh", privileged: true
   
     machine.vm.provider "virtualbox" do |v|
       v.cpus = 1
