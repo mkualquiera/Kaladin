@@ -1,6 +1,6 @@
 ---
 
-  - name: add admin tools sbin to path in root shell
+- name: add admin tools sbin to path in root shell
   ansible.builtin.lineinfile:
     path: /root/.bashrc
     line: 'export PATH="/root/Kaladin/sbin:$PATH"'
