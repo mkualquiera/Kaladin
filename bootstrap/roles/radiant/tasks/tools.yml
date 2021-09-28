@@ -1,8 +1,8 @@
 ---
 
 - name: copy kaladin admin tools 
-  copy:
-    src: usr/kaladin
+  git:
+    repo: https://github.com/mkualquiera/kaladin-tools.git
     dest: /usr/kaladin
 
 
